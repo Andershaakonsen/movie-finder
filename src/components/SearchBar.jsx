@@ -9,7 +9,6 @@ const apiKey = "27d8b269";
 
 const SearchBar = ({ setMovies, movies }) => {
   const [input, setInput] = useState("");
-  //const [movieList, setMovieList] = useState(titleArr);
 
   const handleChange = (e) => {
     setInput(e.target.value);
@@ -56,7 +55,7 @@ const SearchBar = ({ setMovies, movies }) => {
       className="grid grid-cols-12 gap-6 w-4/5 mx-auto items-center mt-4 "
       onSubmit={handleSubmit}
     >
-      <div className="relative col-span-8">
+      <div className="relative col-span-10">
         {" "}
         <input
           type="text"
@@ -83,10 +82,10 @@ const SearchBar = ({ setMovies, movies }) => {
       </div>
 
       <button
-        className="col-span-4 border border-radix-slate7 hover:border-radix-slate8 bg-radix-cyan3 hover:bg-radix-cyan4 py-1 px-2 rounded-md text-radix-cyan11 hover:text-radix-cyan12"
+        className="col-span-2 border border-radix-slate7 hover:border-radix-slate8 bg-radix-cyan3 hover:bg-radix-cyan4 py-1 px-1 w-20 rounded-md text-sm text-radix-cyan11 hover:text-radix-cyan12"
         type="submit"
       >
-        search
+        SEARCH
       </button>
 
       <ToastContainer />

@@ -16,8 +16,6 @@ const Home = ({ setWatchlist }) => {
     localStorage.setItem("movies", JSON.stringify(movies));
   }, [movies]);
 
-  const saved = localStorage.getItem("movies");
-
   return (
     <div>
       <div className="flex flex-col items-center container mx-auto">
@@ -25,7 +23,11 @@ const Home = ({ setWatchlist }) => {
           Movie Finder
         </h1>
         <SearchBar movies={movies} setMovies={setMovies} />
-        <MoviesRow movies={movies} setWatchlist={setWatchlist} />
+        <MoviesRow
+          movies={movies}
+          setWatchlist={setWatchlist}
+          setMovies={setMovies}
+        />
       </div>
     </div>
   );
