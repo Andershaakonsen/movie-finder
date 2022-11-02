@@ -10,6 +10,7 @@ specifiers:
   radix-colors-for-tailwind: ^2.0.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-icons: ^4.6.0
   tailwindcss: ^3.2.1
   vite: ^3.2.0
 
@@ -18,6 +19,7 @@ dependencies:
   radix-colors-for-tailwind: 2.0.0_lycaqaeny3mp632atgvyvqdgwe
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.6.0_react@18.2.0
 
 devDependencies:
   '@types/react': 18.0.24
@@ -1353,6 +1355,14 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-icons/4.6.0_react@18.2.0:
+    resolution: {integrity: sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-refresh/0.14.0:

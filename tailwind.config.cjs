@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: [
     require("radix-colors-for-tailwind")({
-      colors: ["blue", "green", "slate", "red"],
+      colors: ["cyan", "yellow", "green", "slate", "red"],
     }),
   ],
 };

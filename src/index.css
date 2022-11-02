@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-radix-slate1 text-radix-slate12;
+  @apply bg-radix-cyan1 text-radix-slate12;
 }
