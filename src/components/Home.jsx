@@ -1,10 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import MoviesRow from "./components/MoviesRow";
-import SearchBar from "./components/SearchBar";
+import SearchBar from "./SearchBar";
+import MoviesRow from "./MoviesRow";
 
-const Home = () => {
+const Home = ({ setWatchlist }) => {
   const [movies, setMovies] = useState(() => {
     const saved = localStorage.getItem("movies");
     const initalValue = JSON.parse(saved);
@@ -25,7 +25,7 @@ const Home = () => {
           Movie Finder
         </h1>
         <SearchBar movies={movies} setMovies={setMovies} />
-        <MoviesRow movies={movies} />
+        <MoviesRow movies={movies} setWatchlist={setWatchlist} />
       </div>
     </div>
   );

@@ -5,13 +5,13 @@ const NavBar = () => {
     <>
       <nav className="flex  justify-around items-center h-14 border-b border-radix-slate6 text-sm text-radix-slate11">
         <div className="">
-          <a href="">HOME</a>
+          <a href="/">HOME</a>
         </div>
         <div>
-          <a href="">WATCHLIST</a>
+          <a href="/watchlist">WATCHLIST</a>
         </div>
         <div>
-          <a href="">FAVORITES</a>
+          <a href="/favorites">FAVORITES</a>
         </div>
       </nav>
     </>
