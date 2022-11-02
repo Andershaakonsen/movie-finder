@@ -2,10 +2,9 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import MoviesRow from "./components/MoviesRow";
-import NavBar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 
-const App = () => {
+const Home = () => {
   const [movies, setMovies] = useState(() => {
     const saved = localStorage.getItem("movies");
     const initalValue = JSON.parse(saved);
@@ -21,7 +20,6 @@ const App = () => {
 
   return (
     <div>
-      <NavBar />
       <div className="flex flex-col items-center container mx-auto">
         <h1 className="w-4/5 text-2xl mt-8 text-radix-cyan12 font-pacifico">
           Movie Finder
@@ -33,4 +31,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

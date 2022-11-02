@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 const MovieCard = ({ movie }) => {
   const { Poster, Title, imdbRating, Released } = movie;
   return (
-    <div className="flex flex-col  bg-radix-cyan3 hover:bg-radix-cyan4 border border-radix-slate6 hover:border-radix-slate7 rounded-md w-44 ml-4">
+    <div className="flex flex-col min-w-fit overflow-y-hidden bg-radix-cyan3 hover:bg-radix-cyan4 border border-radix-slate6 hover:border-radix-slate7 rounded-md w-44 ml-4">
       <img
         src={Poster}
         alt={`Poster for ${Title}`}
@@ -12,7 +12,9 @@ const MovieCard = ({ movie }) => {
       />{" "}
       <div className="flex flex-col justify-between h-full">
         <div>
-          <h3 className="text-md text-radix-cyan12">{Title}</h3>
+          <h3 className="text-md text-radix-cyan12 max-h-7 overflow-hidden">
+            {Title}
+          </h3>
         </div>
 
         <div className="flex flex-col ">

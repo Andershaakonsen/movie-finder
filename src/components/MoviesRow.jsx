@@ -7,7 +7,6 @@ const MoviesRow = ({ movies }) => {
       {movies.map((movie) => (
         <MovieCard movie={movie} key={movie.imdbID} />
       ))}
-      {/* <MovieCard /> */}
     </div>
   );
 };
