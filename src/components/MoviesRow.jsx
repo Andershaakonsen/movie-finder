@@ -1,10 +1,13 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const MoviesRow = () => {
+const MoviesRow = ({ movies }) => {
   return (
     <div className="flex w-full justify-center">
-      <MovieCard />
+      {movies.map((movie) => (
+        <MovieCard movie={movie} key={movie.imdbID} />
+      ))}
+      {/* <MovieCard /> */}
     </div>
   );
 };
