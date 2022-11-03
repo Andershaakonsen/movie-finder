@@ -2,8 +2,7 @@ import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
-import { titleArr } from "../dataj";
-import { data } from "autoprefixer";
+import { titleArr } from "../data";
 
 const baseUrl = "http://www.omdbapi.com/";
 const apiKey = "27d8b269";

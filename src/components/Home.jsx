@@ -1,8 +1,10 @@
 import React from "react";
+import { Suspense } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import SearchBar from "./SearchBar";
 import MoviesRow from "./MoviesRow";
+
+const SearchBar = React.lazy(() => import("./SearchBar"));
 
 const Home = ({ setWatchlist }) => {
   const [movies, setMovies] = useState(() => {
@@ -22,7 +24,15 @@ const Home = ({ setWatchlist }) => {
         <h1 className="w-4/5 text-2xl mt-8 text-radix-cyan12 font-pacifico">
           Movie Finder
         </h1>
-        <SearchBar movies={movies} setMovies={setMovies} />
+        <Suspense
+          fallback={
+            <div class="bg-radix-slate3 h-4 rounded-md border slate-border">
+              Loading...
+            </div>
+          }
+        >
+          <SearchBar movies={movies} setMovies={setMovies} />
+        </Suspense>
         <MoviesRow
           movies={movies}
           setWatchlist={setWatchlist}
