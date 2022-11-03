@@ -65,7 +65,7 @@ const SearchBar = ({ setMovies, movies }) => {
           value={input}
         />
         {!!input && (
-          <div className="absolute top8 left-0 bg-radix-slate3  opacity-70 max-h-44 overflow-y-scroll scroll w-full">
+          <div className="absolute top8 left-0 bg-radix-slate3 z-10 opacity-70 max-h-44 overflow-y-scroll scroll w-full">
             <ul className="">
               {filteredList.map((el) => (
                 <li

@@ -1,12 +1,15 @@
 import React from "react";
-import MovieInfo from "./MovieInfo";
+import MovieFavorite from "./MovieFavorite";
 
-const Favorites = ({ favorites, Favorites }) => {
+const Favorites = ({ favorites, setFavorites }) => {
   return (
-    <div>
-      Favorites
-      {favorites.map((el) => (
-        <MovieInfo movie={el} />
+    <div className="container mx-auto">
+      {favorites.map((movie) => (
+        <MovieFavorite
+          movie={movie}
+          key={movie.imdbID}
+          setFavorites={setFavorites}
+        />
       ))}
     </div>
   );
