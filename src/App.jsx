@@ -6,6 +6,8 @@ import Favorites from "./components/Favorites";
 import Watchlist from "./components/Watchlist";
 import { useState } from "react";
 import { useEffect } from "react";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   const [watchlist, setWatchlist] = useState(() => {
     const saved = localStorage.getItem("watchlist");
