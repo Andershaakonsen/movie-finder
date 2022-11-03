@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Favorites from "./components/Favorites";
 import Watchlist from "./components/Watchlist";
