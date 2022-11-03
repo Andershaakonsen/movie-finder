@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { Rating } from "@mantine/core";
 import { useRef } from "react";
-// import ReactStars from "react-rating-stars-component";
 
 const MovieFavorite = ({ movie, setFavorites }) => {
   const [areaText, setAreaText] = useState(
@@ -20,12 +19,10 @@ const MovieFavorite = ({ movie, setFavorites }) => {
 
   const handleEdit = () => {
     editedText.current = areaText;
-    console.log("Edited text inside handleEdit: " + editedText.current);
     setEditText(true);
   };
 
   const handleUndo = () => {
-    console.log("Edited text inside handle undo:" + editedText.current);
     setAreaText(editedText.current);
     setEditText(false);
   };
@@ -34,12 +31,9 @@ const MovieFavorite = ({ movie, setFavorites }) => {
     e.preventDefault();
     setEditText(false);
     editedText.current = areaText;
-    console.log("Edited text inise submit: " + editedText.current);
     setFavorites((prevState) => {
       return prevState.map((el) => {
         if (el.Title === Title) {
-          console.log(el);
-          console.log(editedText.current);
           return { ...el, userReview: editedText.current, userRating: rating };
         }
         return el;
@@ -65,7 +59,6 @@ const MovieFavorite = ({ movie, setFavorites }) => {
               placeholder="Write a short review on why you like the movie"
               value={areaText}
               onChange={(e) => {
-                console.log("Area Text: " + e.target.value);
                 setAreaText(e.target.value);
               }}
             />

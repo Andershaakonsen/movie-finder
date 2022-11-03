@@ -44,13 +44,17 @@ const MovieInfo = ({ movie, setWatchlist, setFavorites }) => {
   };
   return (
     <div className="w-full flex flex-col mt-4 pb-2 border-b border-radix-slate4">
-      <h2>{Title}</h2>
-      <p className="text-radix-slate11 italic text-sm">{Released}</p>
-      <div className="grid grid-cols-1  md:grid-cols-12">
-        <div className="col-span-4">
+      <div className="flex  items-end justify-center md:justify-start">
+        <h2 className="text-center md:text-start">{Title}</h2>
+        <p className="text-radix-slate11 italic text-sm text-center ml-2 md:text-start ">
+          {Released}
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-12">
+        <div className="col-span-1 md:col-span-4 mx-auto md:mx-0">
           <img src={Poster} />
         </div>
-        <div className="col-span-8 md:col-span-6 flex flex-col justify-between">
+        <div className="col-span-1 mt-2 md:mt-0 md:col-span-6 flex flex-col items-center text-center md:text-left justify-between">
           <div>
             <p className="text-sm">
               <span className="italic text-radix-slate11">Actors:</span>{" "}
@@ -75,7 +79,7 @@ const MovieInfo = ({ movie, setWatchlist, setFavorites }) => {
               <span className="italic text-radix-slate11">Runtime:</span>{" "}
               {Runtime}
             </p>
-            <p className="text-sm mt-2 flex items-center">
+            <p className="text-sm mt-2 flex items-center w-full justify-center md:justify-start">
               <span className="italic text-radix-slate11 mr-1">
                 Imdb Rating:
               </span>{" "}

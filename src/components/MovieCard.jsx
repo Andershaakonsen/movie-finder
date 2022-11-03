@@ -33,12 +33,12 @@ const MovieCard = ({ movie, setWatchlist, setMovies }) => {
   };
 
   return (
-    <div className="flex flex-col min-w-fit overflow-y-hidden bg-radix-cyan3 hover:bg-radix-cyan4 border border-radix-slate6 hover:border-radix-slate7 rounded-md w-44 ml-4">
+    <div className="flex flex-col min-w-[300px] overflow-y-hidden bg-radix-cyan3 hover:bg-radix-cyan4 border border-radix-slate6 hover:border-radix-slate7 rounded-md w-44 ">
       <div className="relative">
         <img
           src={Poster}
           alt={`Poster for ${Title}`}
-          className="object-fit w-full relative"
+          className="object-cover w-full max-h-[400px] 2xl:max-h-[none] relative"
         />
         <div className="absolute right-0 top-0 cursor-pointer ">
           <ImCross
