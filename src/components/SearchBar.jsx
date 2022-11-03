@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { titleArr } from "../data";
 
-const baseUrl = "http://www.omdbapi.com/";
+const baseUrl = "https://www.omdbapi.com/";
 const apiKey = "27d8b269";
 
 const SearchBar = ({ setMovies, movies }) => {
