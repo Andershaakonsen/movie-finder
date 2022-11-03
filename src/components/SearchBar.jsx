@@ -3,6 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import { titleArr } from "../dataj";
+import { data } from "autoprefixer";
 
 const baseUrl = "http://www.omdbapi.com/";
 const apiKey = "27d8b269";
@@ -40,6 +41,15 @@ const SearchBar = ({ setMovies, movies }) => {
       .then((data) => {
         if (data.Response === "False") {
           throw new Error();
+        }
+
+        if (movies.find((movie) => movie.Title === data.Title)) {
+          toast.info(`${data.Title} is already added!`, {
+            position: "bottom-center",
+            hideProgressBar: true,
+            autoClose: 2000,
+          });
+          return;
         }
         return setMovies((prevState) => [...prevState, data]);
       })

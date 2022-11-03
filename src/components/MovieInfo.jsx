@@ -25,7 +25,7 @@ const MovieInfo = ({ movie, setWatchlist, setFavorites }) => {
     setFavorites((prevState) => {
       //Adds movie if prevState does not contain it
       if (!prevState.filter((movie) => movie.Title === Title).length > 0) {
-        toast.info(`Adde ${Title} to watchlist`, {
+        toast.info(`Added ${Title} to watchlist`, {
           position: "bottom-center",
           hideProgressBar: true,
           autoClose: 2000,

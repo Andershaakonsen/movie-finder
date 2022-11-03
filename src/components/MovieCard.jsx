@@ -17,7 +17,7 @@ const MovieCard = ({ movie, setWatchlist, setMovies }) => {
         });
         return [...prevState, movie];
       } else {
-        toast.info("Allready added to watchlist!", {
+        toast.info("Already added to watchlist!", {
           position: "bottom-center",
           hideProgressBar: true,
           autoClose: 2000,

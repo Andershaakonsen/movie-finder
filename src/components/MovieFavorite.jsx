@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Rating } from "@mantine/core";
 import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const MovieFavorite = ({ movie, setFavorites }) => {
   const [areaText, setAreaText] = useState(
@@ -38,6 +39,11 @@ const MovieFavorite = ({ movie, setFavorites }) => {
         }
         return el;
       });
+    });
+    toast.info(`Submitted your review of ${Title}`, {
+      position: "bottom-center",
+      hideProgressBar: true,
+      autoClose: 2000,
     });
   };
 
@@ -108,6 +114,7 @@ const MovieFavorite = ({ movie, setFavorites }) => {
           </button>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
