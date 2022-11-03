@@ -13,21 +13,40 @@ const App = () => {
     return initialValue || [];
   });
 
+  const [favorites, setFavorites] = useState(() => {
+    const saved = localStorage.getItem("favorites");
+    const initialValue = JSON.parse(saved);
+    return initialValue || [];
+  });
+
   //storing movies in local storage
   useEffect(() => {
     localStorage.setItem("watchlist", JSON.stringify(watchlist));
   }, [watchlist]);
+
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home setWatchlist={setWatchlist} />} />
-        <Route path="/favorites" element={<Favorites />} />
+        <Route
+          path="/favorites"
+          element={
+            <Favorites favorites={favorites} setFavorites={setFavorites} />
+          }
+        />
         <Route
           path="/watchlist"
           element={
-            <Watchlist watchlist={watchlist} setWatchlist={setWatchlist} />
+            <Watchlist
+              watchlist={watchlist}
+              setWatchlist={setWatchlist}
+              setFavorites={setFavorites}
+            />
           }
         />
       </Routes>
