@@ -26,7 +26,7 @@ const Home = ({ setWatchlist }) => {
         </h1>
         <Suspense
           fallback={
-            <div class="bg-radix-slate3 h-4 rounded-md border slate-border">
+            <div className="bg-radix-slate3 h-4 rounded-md border slate-border">
               Loading...
             </div>
           }
