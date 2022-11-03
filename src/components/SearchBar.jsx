@@ -52,11 +52,12 @@ const SearchBar = ({ setMovies, movies }) => {
         }
         return setMovies((prevState) => [...prevState, data]);
       })
-      .catch((error) =>
+      .catch((error) => {
+        console.log(error);
         toast.error("Failed to fetch data!", {
           position: toast.POSITION.TOP_RIGHT,
-        })
-      );
+        });
+      });
   };
 
   return (
